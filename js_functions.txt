@@ -1,0 +1,12 @@
+function getCookie(cookieName) {
+    let cA = document.cookie;
+    if(cA.includes(cookieName)){
+        let startIndex,endIndex;
+        startIndex = cA.indexOf(cookieName) + cookieName.length + 1;
+        endIndex = cA.indexOf(";",startIndex);
+        return cA.substring(startIndex,endIndex);
+    }
+    else {
+        return false;
+    }
+}
